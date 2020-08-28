@@ -20,7 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d59b7ef7-f2b5-4901-b288-acf2ea375f68" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Domain.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Domain/Board.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Domain/Board.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Domain/Game.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Domain/Game.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Domain/Ore.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Domain/Ore.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Domain/OreColumn.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Domain/OreColumn.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Domain/OreType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Domain/OreType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MatchController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MatchController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +47,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Presentation/MatchController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/dd/536d9369/Random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/97/3e44f06a/Object.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -43,12 +60,17 @@
         <option value="$PROJECT_DIR$/Assets/Domain/Entities/Ore.cs" />
         <option value="$PROJECT_DIR$/Assets/Domain/Entities/OreColumn.cs" />
         <option value="$PROJECT_DIR$/Assets/Domain/CreateColumn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Domain/OreType.cs" />
         <option value="$PROJECT_DIR$/Assets/Domain/Ore.cs" />
         <option value="$PROJECT_DIR$/Assets/MatchController.cs" />
         <option value="$PROJECT_DIR$/Assets/Domain/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/Domain/Board.cs" />
         <option value="$PROJECT_DIR$/Assets/Domain/OreColumn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Domain/OreType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Board.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Presentation/OrePrefabMap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Domain/OreColumn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Presentation/MatchController.cs" />
       </list>
     </option>
   </component>
@@ -93,7 +115,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598563564700</updated>
-      <workItem from="1598563577177" duration="5321000" />
+      <workItem from="1598563577177" duration="8344000" />
     </task>
     <servers />
   </component>
@@ -121,9 +143,10 @@
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="405" y="223" key="RiderGenerateDialog/-900.23.900.1577/0.23.1792.1030@0.23.1792.1030" timestamp="1598568490815" />
-    <state width="498" height="445" key="SwitcherDM" timestamp="1598569027008">
-      <screen x="0" y="23" width="1792" height="1030" />
+    <state width="498" height="682" key="SwitcherDM" timestamp="1598577197176">
+      <screen x="-900" y="23" width="900" height="1577" />
     </state>
+    <state width="498" height="682" key="SwitcherDM/-900.23.900.1577/0.23.1792.1030@-900.23.900.1577" timestamp="1598577197176" />
     <state width="498" height="445" key="SwitcherDM/-900.23.900.1577/0.23.1792.1030@0.23.1792.1030" timestamp="1598569027008" />
     <state x="406" y="249" key="search.everywhere.popup" timestamp="1598565041705">
       <screen x="0" y="23" width="1792" height="1030" />

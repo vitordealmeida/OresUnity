@@ -2,11 +2,11 @@
 {
     public enum OreType
     {
-        Green = 0,
-        Gray = 1,
-        Yellow = 2,
+        Blue = 0,
+        Green = 1,
+        Purple = 2,
         Red = 3,
-        Teal = 4,
+        Yellow = 4,
         Bomb = 5
     }
 }

@@ -13,6 +13,8 @@ namespace Domain.Entities
             _ores = new Ore[ColumnSize];
         }
 
+        public int Count => _oreCount;
+
         private void Push(Ore ore)
         {
             _ores[_oreCount++] = ore;

@@ -7,14 +7,19 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Domain" t="Include">
-          <e p="Board.cs" t="Include" />
-          <e p="Game.cs" t="Include" />
-          <e p="Ore.cs" t="Include" />
-          <e p="OreColumn.cs" t="Include" />
-          <e p="OreType.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="Domain" t="Include">
+            <e p="Board.cs" t="Include" />
+            <e p="Game.cs" t="Include" />
+            <e p="Ore.cs" t="Include" />
+            <e p="OreColumn.cs" t="Include" />
+            <e p="OreType.cs" t="Include" />
+          </e>
+          <e p="Presentation" t="Include">
+            <e p="MatchController.cs" t="Include" />
+            <e p="OrePrefabMap.cs" t="Include" />
+          </e>
         </e>
-        <e p="MatchController.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="OresUnity.sln" t="IncludeFlat" />

@@ -5,18 +5,19 @@ namespace Domain.Entities
     public class Board
     {
         private const int InitialColumnCount = 7;
-        private List<OreColumn> oreColumns;
         private int _oreTypes;
 
         public Board(int oreTypes)
         {
             _oreTypes = oreTypes;
-            oreColumns = new List<OreColumn>(InitialColumnCount);
+            OreColumns = new List<OreColumn>(InitialColumnCount);
             for (var i = 0; i < InitialColumnCount; i++)
             {
                 AddColumn();
             }
         }
+
+        public List<OreColumn> OreColumns { get; }
 
         public void IncreaseOreTypes()
         {
@@ -25,13 +26,13 @@ namespace Domain.Entities
 
         public void AddColumn()
         {
-            oreColumns.Add(OreColumn.GenerateRandomColumn(_oreTypes));
+            OreColumns.Add(OreColumn.GenerateRandomColumn(_oreTypes));
         }
 
         public List<Ore> FindOresForClear(int column, int height)
         {
             var visitedOres = new List<Ore>();
-            var ore = oreColumns[column].Get(height);
+            var ore = OreColumns[column].Get(height);
             if (ore == null) return visitedOres;
 
             visitedOres.Add(ore);
@@ -50,12 +51,12 @@ namespace Domain.Entities
 
         private void VisitOre(int column, int height, List<Ore> visitedOres)
         {
-            if (column < 0 || column >= oreColumns.Count || height < 0 || height >= OreColumn.ColumnSize)
+            if (column < 0 || column >= OreColumns.Count || height < 0 || height >= OreColumn.ColumnSize)
             {
                 return;
             }
 
-            var ore = oreColumns[column].Get(height);
+            var ore = OreColumns[column].Get(height);
             if (ore == null || visitedOres.Contains(ore) || ore.type != visitedOres[0].type)
             {
                 return;
@@ -71,7 +72,7 @@ namespace Domain.Entities
             for (int i = OreColumn.ColumnSize - 1; i >= 0; i--)
             {
                 debug += "\n[";
-                foreach (var oreColumn in oreColumns)
+                foreach (var oreColumn in OreColumns)
                 {
                     debug += oreColumn.Get(i) + ",";
                 }
