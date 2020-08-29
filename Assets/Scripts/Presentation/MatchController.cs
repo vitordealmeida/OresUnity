@@ -6,6 +6,7 @@ using Unity.Burst;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Jobs;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace DefaultNamespace
@@ -15,6 +16,7 @@ namespace DefaultNamespace
         private Game _game;
         [Header("Game Basics")] public Transform spawnPoint;
         public OrePrefabMap[] orePrefabMaps;
+        public AudioSource audioSourceEffects;
 
         [Header("Game Visuals")] [Range(1, 5)] public float animationSpeed = 1;
 
@@ -26,11 +28,15 @@ namespace DefaultNamespace
         public Image timeProgress;
         public Animator uiAnimator;
         public Canvas uiCanvas;
-
+        public AudioClip clickSound;
+        public AudioClip levelUpSound;
+        public AudioClip addColumnSound;
+        
         private Vector3 _prefabSize;
         private const float ComparisonThreshold = .0001f;
         private static readonly int LevelUpTriggerHash = Animator.StringToHash("LevelUp");
         private static readonly int ScoreTriggerHash = Animator.StringToHash("Score");
+        private static readonly int GameOverTriggerHash = Animator.StringToHash("GameOver");
 
         private void Awake()
         {
@@ -46,6 +52,11 @@ namespace DefaultNamespace
                 var columnHolder = InstantiateColumn(oreColumn);
                 columnHolder.transform.localPosition = new Vector3(i * _prefabSize.x, 0, 0);
             }
+        }
+
+        public void OnRetryPressed()
+        {
+            SceneManager.LoadScene(0);
         }
 
         private GameObject InstantiateColumn(OreColumn oreColumn)
@@ -105,6 +116,8 @@ namespace DefaultNamespace
 
         public void AddNewColumn(OreColumn oreColumn)
         {
+            audioSourceEffects.PlayOneShot(addColumnSound);
+            
             var columnHolder = InstantiateColumn(oreColumn);
             columnHolder.transform.SetAsFirstSibling();
             columnHolder.transform.localPosition = new Vector3(-1 * _prefabSize.x, 0, 0);
@@ -128,6 +141,8 @@ namespace DefaultNamespace
 
         public void ClearOresAt(List<int2> oreCluster, int clusterScore)
         {
+            audioSourceEffects.PlayOneShot(clickSound);
+            
             ShowEarnedPoints(clusterScore);
 
             // Sorts asc on column, desc on height 
@@ -169,8 +184,7 @@ namespace DefaultNamespace
 
         public void ShowGameOver()
         {
-            Time.timeScale = 0;
-            Debug.Log("Game over");
+            uiAnimator.SetTrigger(GameOverTriggerHash);
         }
 
         public void RemoveColumns(List<int> emptyColumns)
@@ -195,6 +209,7 @@ namespace DefaultNamespace
         public void DisplayLevelUp()
         {
             uiAnimator.SetTrigger(LevelUpTriggerHash);
+            audioSourceEffects.PlayOneShot(levelUpSound);
         }
 
         private Coroutine _columnAddTimer;

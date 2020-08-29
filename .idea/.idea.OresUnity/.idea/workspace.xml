@@ -20,21 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d59b7ef7-f2b5-4901-b288-acf2ea375f68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ores/Prefabs/BlueOrePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ores/Prefabs/BlueOrePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ores/Prefabs/GreenOrePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ores/Prefabs/GreenOrePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ores/Prefabs/PurpleOrePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ores/Prefabs/PurpleOrePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ores/Prefabs/RedOrePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ores/Prefabs/RedOrePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ores/Prefabs/YellowOrePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ores/Prefabs/YellowOrePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Domain/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Domain/Board.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Domain/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Domain/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Domain/IGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Domain/IGameView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainScene/LevelUp.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScene/LevelUp.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainScene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScene/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainScene/MainSceneUiAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScene/MainSceneUiAnimator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainScene/Score.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScene/Score.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presentation/MatchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presentation/MatchController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presentation/OreController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presentation/OreController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +66,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Level2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Level3.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Game.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Presentation/MatchController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Presentation/OreController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Presentation/OrePrefabMap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Presentation/MatchController.cs" />
       </list>
     </option>
   </component>
@@ -125,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598563564700</updated>
       <workItem from="1598563577177" duration="16102000" />
-      <workItem from="1598634527980" duration="24987000" />
+      <workItem from="1598634527980" duration="26360000" />
     </task>
     <servers />
   </component>
