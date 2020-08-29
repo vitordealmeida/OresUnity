@@ -1,34 +1,26 @@
 using System.Collections.Generic;
 using Unity.Mathematics;
-using UnityEngine;
 
 namespace Domain.Entities
 {
     public class Board
     {
         private const int InitialColumnCount = 7;
-        private int _oreTypes;
 
         public List<OreColumn> OreColumns { get; }
 
         public Board(int oreTypes)
         {
-            _oreTypes = oreTypes;
             OreColumns = new List<OreColumn>(InitialColumnCount);
             for (var i = 0; i < InitialColumnCount; i++)
             {
-                OreColumns.Add(OreColumn.GenerateRandomColumn(_oreTypes));
+                OreColumns.Add(OreColumn.GenerateRandomColumn(oreTypes));
             }
         }
 
-        public void IncreaseOreTypes()
+        public void AddColumn(int oreTypeCount)
         {
-            _oreTypes += 1;
-        }
-
-        public void AddColumn()
-        {
-            OreColumns.Insert(0, OreColumn.GenerateRandomColumn(_oreTypes));
+            OreColumns.Insert(0, OreColumn.GenerateRandomColumn(oreTypeCount));
         }
 
         private int2 FindOreCoords(Ore ore)

@@ -11,6 +11,7 @@ namespace Domain.Entities
         void ShowGameOver();
         void RemoveColumns(List<int> emptyColumns);
         void UpdateScore(int score);
-        void ScheduleColumnAdd();
+        void ScheduleColumnAdd(float timeForColumnAdd);
+        void DisplayLevelUp();
     }
 }

@@ -15,20 +15,28 @@ namespace DefaultNamespace
         private Game _game;
         [Header("Game Basics")] public Transform spawnPoint;
         public OrePrefabMap[] orePrefabMaps;
-        [Range(1, 5)] public float animationSpeed = 1;
-        public float initialTimeForColumn;
+
+        [Header("Game Visuals")] [Range(1, 5)] public float animationSpeed = 1;
+
+        [Header("Game Parameters")] public float initialTimeForColumn;
 
         [Header("UI")] public Text gameScore;
+        public Text lastMovementScore;
+        public RectTransform lastMovementScoreHolder;
         public Image timeProgress;
+        public Animator uiAnimator;
+        public Canvas uiCanvas;
 
         private Vector3 _prefabSize;
         private const float ComparisonThreshold = .0001f;
+        private static readonly int LevelUpTriggerHash = Animator.StringToHash("LevelUp");
+        private static readonly int ScoreTriggerHash = Animator.StringToHash("Score");
 
         private void Awake()
         {
             _prefabSize = orePrefabMaps[0].prefab.GetComponent<SpriteRenderer>().bounds.size;
 
-            _game = new Game(this);
+            _game = new Game(this, initialTimeForColumn);
 
             var oreColumns = _game.GetOreColumns();
             for (var i = 0; i < oreColumns.Count; i++)
@@ -120,6 +128,8 @@ namespace DefaultNamespace
 
         public void ClearOresAt(List<int2> oreCluster, int clusterScore)
         {
+            ShowEarnedPoints(clusterScore);
+
             // Sorts asc on column, desc on height 
             oreCluster.Sort((coord1, coord2) =>
             {
@@ -132,9 +142,21 @@ namespace DefaultNamespace
                 var oreTransform = spawnPoint.GetChild(oreCoord.x).GetChild(oreCoord.y);
                 oreTransform.gameObject.SetActive(false);
                 oreTransform.SetParent(null);
-                // TODO spawn destruction particles
+                var oreDestructionEffect = oreTransform.GetComponent<OreController>().DestructionEffectPrefab();
+                Instantiate(oreDestructionEffect, oreTransform.position, Quaternion.identity);
                 Destroy(oreTransform.gameObject);
             }
+        }
+
+        private void ShowEarnedPoints(int clusterScore)
+        {
+            lastMovementScore.text = clusterScore.ToString();
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                uiCanvas.transform as RectTransform,
+                Input.mousePosition, uiCanvas.worldCamera,
+                out Vector2 mousePositionCanvas);
+            lastMovementScoreHolder.transform.position = uiCanvas.transform.TransformPoint(mousePositionCanvas);
+            uiAnimator.SetTrigger(ScoreTriggerHash);
         }
 
         public void ApplyGravity()
@@ -170,16 +192,21 @@ namespace DefaultNamespace
             gameScore.text = score.ToString();
         }
 
+        public void DisplayLevelUp()
+        {
+            uiAnimator.SetTrigger(LevelUpTriggerHash);
+        }
+
         private Coroutine _columnAddTimer;
 
-        public void ScheduleColumnAdd()
+        public void ScheduleColumnAdd(float timeForColumnAdd)
         {
             if (_columnAddTimer != null)
             {
                 StopCoroutine(_columnAddTimer);
             }
 
-            _columnAddTimer = StartCoroutine(TimerForColumnAddition(initialTimeForColumn));
+            _columnAddTimer = StartCoroutine(TimerForColumnAddition(timeForColumnAdd));
         }
 
         private IEnumerator TimerForColumnAddition(float timeLimit)
@@ -190,6 +217,7 @@ namespace DefaultNamespace
                 timeProgress.fillAmount = 1 - (Time.time - initialTime) / timeLimit;
                 yield return null;
             }
+
             _game.OnTimeExpiredColumn();
         }
 

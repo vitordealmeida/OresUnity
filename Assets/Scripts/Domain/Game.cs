@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 namespace Domain.Entities
@@ -11,27 +12,28 @@ namespace Domain.Entities
         public const int MaxColumns = 16;
         private readonly Board _board;
 
-        public int Score
-        {
-            get => _score;
-            private set
-            {
-                _score = value;
-                _view.UpdateScore(value);
-            }
-        }
+        private readonly List<Level> _levels;
 
-        private bool gameOver;
+        private bool _gameOver;
         private int _score;
+        private Level _currentLevel;
 
-        public Game(IGameView view)
+        public Game(MatchController view, float initialTimeForColumn)
         {
             _view = view;
             _board = new Board(InitialOreTypes);
+            _levels = new List<Level>
+            {
+                new Level1(initialTimeForColumn),
+                new Level2(initialTimeForColumn),
+                new Level3(initialTimeForColumn),
+                new Level4(initialTimeForColumn)
+            };
+            
+            _currentLevel = _levels[0];
+            
             _view.UpdateScore(0);
-            _view.ScheduleColumnAdd();
-            Debug.Log("Board: ");
-            Debug.Log(_board);
+            _view.ScheduleColumnAdd(_currentLevel.TimeForColumnAdd);
         }
 
         public override string ToString()
@@ -41,6 +43,8 @@ namespace Domain.Entities
 
         public void OnOreClicked(Ore ore)
         {
+            if (_gameOver) return;
+
             var oreCluster = _board.FindOreClusterCoordinates(ore);
             if (oreCluster.Count <= 1)
             {
@@ -49,18 +53,36 @@ namespace Domain.Entities
 
             _board.ClearOresAt(oreCluster);
             var clusterScore = (int) Math.Pow(oreCluster.Count, 2);
-            Score += clusterScore;
+            IncreaseScore(clusterScore);
 
             _view.ClearOresAt(oreCluster, clusterScore);
 
             var emptyColumns = _board.FindEmptyColumns();
 
             _board.RemoveColumns(emptyColumns);
-
             _board.ApplyGravity();
 
             _view.RemoveColumns(emptyColumns);
             _view.ApplyGravity();
+        }
+
+        private void IncreaseScore(int clusterScore)
+        {
+            _score += (int) (clusterScore * _currentLevel.ScoreMultiplier);
+            _view.UpdateScore(_score);
+            if (_score > _currentLevel.ScoreLimit)
+            {
+                var curLevelIndex = _levels.FindIndex(level => level == _currentLevel);
+                if (curLevelIndex == _levels.Count - 1)
+                {
+                    GameOver();
+                }
+                else
+                {
+                    _currentLevel = _levels[curLevelIndex + 1];
+                    _view.DisplayLevelUp();
+                }
+            }
         }
 
         public void OnTimeExpiredColumn()
@@ -75,19 +97,21 @@ namespace Domain.Entities
 
         private void AddColumn()
         {
-            _board.AddColumn();
+            if (_gameOver) return;
+            _board.AddColumn(_currentLevel.OreTypeCount);
             _view.AddNewColumn(_board.OreColumns[0]);
             if (_board.OreColumns.Count > MaxColumns)
             {
                 GameOver();
             }
-            _view.ScheduleColumnAdd();
+
+            _view.ScheduleColumnAdd(_currentLevel.TimeForColumnAdd);
             Debug.Log(_board);
         }
 
         private void GameOver()
         {
-            gameOver = true;
+            _gameOver = true;
             _view.ShowGameOver();
         }
 

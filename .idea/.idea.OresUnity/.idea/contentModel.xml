@@ -12,6 +12,11 @@
             <e p="Board.cs" t="Include" />
             <e p="Game.cs" t="Include" />
             <e p="IGameView.cs" t="Include" />
+            <e p="Level.cs" t="Include" />
+            <e p="Level1.cs" t="Include" />
+            <e p="Level2.cs" t="Include" />
+            <e p="Level3.cs" t="Include" />
+            <e p="Level4.cs" t="Include" />
             <e p="Ore.cs" t="Include" />
             <e p="OreColumn.cs" t="Include" />
             <e p="OreType.cs" t="Include" />

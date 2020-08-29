@@ -21,15 +21,20 @@
   <component name="ChangeListManager">
     <list default="true" id="d59b7ef7-f2b5-4901-b288-acf2ea375f68" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OresUnity/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ores/Prefabs/BlueOrePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ores/Prefabs/BlueOrePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ores/Prefabs/_MainOrePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ores/Prefabs/_MainOrePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ores/Prefabs/GreenOrePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ores/Prefabs/GreenOrePrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ores/Prefabs/PurpleOrePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ores/Prefabs/PurpleOrePrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ores/Prefabs/RedOrePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ores/Prefabs/RedOrePrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ores/Prefabs/YellowOrePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ores/Prefabs/YellowOrePrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Domain/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Domain/Board.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Domain/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Domain/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Domain/OreColumn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Domain/OreColumn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Domain/IGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Domain/IGameView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presentation/MatchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presentation/MatchController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presentation/OreController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presentation/OreController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,14 +65,19 @@
         <option value="$PROJECT_DIR$/Assets/Domain/Board.cs" />
         <option value="$PROJECT_DIR$/Assets/Domain/OreColumn.cs" />
         <option value="$PROJECT_DIR$/Assets/Domain/OreType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Presentation/OrePrefabMap.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Presentation/OreController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Domain/OreColumn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Domain/IGameView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Presentation/MatchController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Board.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Ore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Level.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Level4.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Domain/IGameView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Board.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Level1.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Level2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Level3.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Domain/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Presentation/MatchController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Presentation/OreController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Presentation/OrePrefabMap.cs" />
       </list>
     </option>
   </component>
@@ -115,7 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598563564700</updated>
       <workItem from="1598563577177" duration="16102000" />
-      <workItem from="1598634527980" duration="20195000" />
+      <workItem from="1598634527980" duration="24987000" />
     </task>
     <servers />
   </component>
@@ -209,15 +219,15 @@
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state width="1750" height="236" key="GridCell.Tab.3.right/-900.23.900.1577/0.23.1792.1030@0.23.1792.1030" timestamp="1598727824576" />
-    <state x="405" y="223" key="RiderGenerateDialog" timestamp="1598711615088">
+    <state x="405" y="223" key="RiderGenerateDialog" timestamp="1598735237639">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
-    <state x="405" y="223" key="RiderGenerateDialog/-900.23.900.1577/0.23.1792.1030@0.23.1792.1030" timestamp="1598711615088" />
-    <state width="498" height="445" key="SwitcherDM" timestamp="1598731737531">
+    <state x="405" y="223" key="RiderGenerateDialog/-900.23.900.1577/0.23.1792.1030@0.23.1792.1030" timestamp="1598735237639" />
+    <state width="498" height="445" key="SwitcherDM" timestamp="1598738704229">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state width="498" height="682" key="SwitcherDM/-900.23.900.1577/0.23.1792.1030@-900.23.900.1577" timestamp="1598656542945" />
-    <state width="498" height="445" key="SwitcherDM/-900.23.900.1577/0.23.1792.1030@0.23.1792.1030" timestamp="1598731737531" />
+    <state width="498" height="445" key="SwitcherDM/-900.23.900.1577/0.23.1792.1030@0.23.1792.1030" timestamp="1598738704229" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1598653122949">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>

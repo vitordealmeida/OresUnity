@@ -7,6 +7,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8803295662645611128, guid: d3069e0980e7645988a31dea4461d1ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8803295662645611128, guid: d3069e0980e7645988a31dea4461d1ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8803295662645611128, guid: d3069e0980e7645988a31dea4461d1ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: -8803295662645611128, guid: d3069e0980e7645988a31dea4461d1ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: -8803295662645611128, guid: d3069e0980e7645988a31dea4461d1ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: -8803295662645611128, guid: d3069e0980e7645988a31dea4461d1ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: -8803295662645611128, guid: d3069e0980e7645988a31dea4461d1ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2869106814119213859, guid: d3069e0980e7645988a31dea4461d1ff,
         type: 3}
       propertyPath: m_Sprite
@@ -17,6 +52,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2869106814119213859, guid: d3069e0980e7645988a31dea4461d1ff,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2869106814119213859, guid: d3069e0980e7645988a31dea4461d1ff,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.88864833
+      objectReference: {fileID: 0}
+    - target: {fileID: 2869106814119213859, guid: d3069e0980e7645988a31dea4461d1ff,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.7877358
       objectReference: {fileID: 0}
     - target: {fileID: 3914255936911391840, guid: d3069e0980e7645988a31dea4461d1ff,
         type: 3}
@@ -73,6 +123,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8235129920794799302, guid: d3069e0980e7645988a31dea4461d1ff,
+        type: 3}
+      propertyPath: destructionEffectPrefab
+      value: 
+      objectReference: {fileID: 5701190860319707267, guid: de169bb3b4b3449faa4719b86e3dcabd,
+        type: 3}
     - target: {fileID: 8515409245107341371, guid: d3069e0980e7645988a31dea4461d1ff,
         type: 3}
       propertyPath: m_Name
