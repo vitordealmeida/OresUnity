@@ -36,44 +36,42 @@ namespace Domain.Entities
             return _ores[height];
         }
 
-        public void Remove(int height, int size)
+        public void Remove(int height)
         {
-            _oreCount -= size;
-            for (var i = height; i < height + size; i++)
-            {
-                _ores[i] = null;
-            }
+            _oreCount -= 1;
+            _ores[height] = null;
         }
 
-        public bool ShouldFall()
+        public int FindGapIndex(int startPosition = 0)
         {
-            for (var i = 0; i < _oreCount; i++)
+            for (var i = startPosition; i < _oreCount; i++)
             {
                 if (_ores[i] == null)
                 {
-                    return true;
+                    return i;
                 }
             }
 
-            return false;
+            return -1;
         }
 
-        public void FallOne()
+        public void FallOne(int startPosition)
         {
-            var foundHole = false;
-            for (var i = 0; i < ColumnSize; i++)
+            for (var i = startPosition; i < ColumnSize - 1; i++)
             {
-                if (!foundHole)
-                {
-                    if (_ores[i] == null)
-                    {
-                        foundHole = true;
-                    }
-                }
-                else
-                {
-                    _ores[i - 1] = _ores[i];
-                }
+                _ores[i] = _ores[i + 1];
+            }
+
+            _ores[ColumnSize - 1] = null;
+        }
+
+        public void ApplyGravity()
+        {
+            var gapIndex = FindGapIndex();
+            while (gapIndex > -1)
+            {
+                FallOne(gapIndex);
+                gapIndex = FindGapIndex();
             }
         }
     }
