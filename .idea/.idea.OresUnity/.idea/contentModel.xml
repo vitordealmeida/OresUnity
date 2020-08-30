@@ -5,7 +5,6 @@
     <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_OresUnity.663355986.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
-      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Domain" t="Include">
@@ -21,17 +20,24 @@
             <e p="OreColumn.cs" t="Include" />
             <e p="OreType.cs" t="Include" />
           </e>
+          <e p="GameAssembly.asmdef" t="Include" />
           <e p="Presentation" t="Include">
             <e p="MatchController.cs" t="Include" />
             <e p="OreController.cs" t="Include" />
             <e p="OrePrefabMap.cs" t="Include" />
           </e>
         </e>
+        <e p="Tests" t="Include">
+          <e p="OreColumnTestSuite.cs" t="Include" />
+          <e p="Tests.asmdef" t="Include" />
+        </e>
       </e>
+      <e p="GameAssembly.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="OresUnity.sln" t="IncludeFlat" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="Tests.csproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>

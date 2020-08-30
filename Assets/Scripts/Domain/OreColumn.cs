@@ -42,7 +42,7 @@ namespace Domain.Entities
             _ores[height] = null;
         }
 
-        public int FindGapIndex(int startPosition = 0)
+        private int FindGapIndex(int startPosition = 0)
         {
             for (var i = startPosition; i < _oreCount; i++)
             {
@@ -55,7 +55,7 @@ namespace Domain.Entities
             return -1;
         }
 
-        public void FallOne(int startPosition)
+        private void FallOne(int startPosition)
         {
             for (var i = startPosition; i < ColumnSize - 1; i++)
             {
