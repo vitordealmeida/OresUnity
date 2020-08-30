@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using DefaultNamespace;
-using UnityEngine;
 
 namespace Domain.Entities
 {
@@ -106,7 +105,6 @@ namespace Domain.Entities
             }
 
             _view.ScheduleColumnAdd(_currentLevel.TimeForColumnAdd);
-            Debug.Log(_board);
         }
 
         private void GameOver()
